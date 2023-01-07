@@ -275,7 +275,7 @@ header {
   color: var(--desciption);
 }
 .portfolio-type-project .item {
-  border: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
 }
 /* tło wykorzystywane na stronie głównej i stopce */
 .background {
