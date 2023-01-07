@@ -1,6 +1,7 @@
 :root {
   --primary-color: #212121;
   --bg: #2f303a;
+  --bg-second: #f5f4fa;
   --highlight: #ffffff;
   --lowlight: #000000;
   --logo-first-part-color: #2196f3;
@@ -15,12 +16,86 @@
   --box-shadow-1: rgba(0, 0, 0, 0.1);
   --box-shadow-2: rgba(0, 0, 0, 0.08);
   --box-shadow-3: rgba(0, 0, 0, 0.12);
-  --bg-inside-button: #f5f4fa;
+  --bg-inside-button: var(--bg-second);
 }
 
 body {
   font-family: 'Roboto', 'Arial', sans-serif;
   color: var(--primary-color);
+}
+
+p {
+  margin: 0 auto;
+  padding: 0;
+}
+h1 {
+  margin: 0 auto;
+  padding: 0;
+}
+h2 {
+  margin: 0 auto;
+  padding: 0;
+}
+h3 {
+  margin: 0 auto;
+  padding: 0;
+}
+h4 {
+  margin: 0 auto;
+  padding: 0;
+}
+h5 {
+  margin: 0 auto;
+  padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header {
+  border-bottom: 1px solid #e5e5e5;
+}
+.m-zero {
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 94px 0;
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.container-solutions {
+  padding-top: 212px;
+  padding-bottom: 188px;
+  background: var(--bg);
+}
+
+.container-what-we-do {
+  padding-top: 0;
+}
+.container-our-team {
+  background: var(--bg-second);
+  height: 648px;
+}
+
+.container-portfolio {
+  padding-top: 50px;
+}
+
+.footer-container {
+  background: var(--bg);
+  padding: 60px 0;
 }
 
 /* usunięcie podkreśleń w odnośnikach */
@@ -48,24 +123,103 @@ body {
 .logo-second-part-alternative {
   color: var(--logo-second-part-color-alternative);
 }
-.list {
-  margin-left: 0;
-  padding-left: 0;
-  list-style-position: none;
+
+.main-menu {
+  display: flex;
+  margin-left: 93px;
 }
+
+.main-menu > .item:not(:last-child) {
+  margin-right: 46px;
+}
+
+.portfolio-menu {
+  display: flex;
+  margin-top: 174px;
+  justify-content: center;
+}
+.portfolio-menu > .item:not(:last-child) {
+  margin-right: 8px;
+}
+
 /* kolorystyka linków w nawigacji */
-.nav-links .link {
+.main-menu .link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.143;
   letter-spacing: 0.02em;
   color: var(--primary-color);
 }
-.nav-links .link:hover {
+.main-menu .link:hover {
   color: var(--hover-color);
 }
-.nav-links .link:focus {
+.main-menu .link:focus {
   color: var(--focus-color);
+}
+
+.header-phone-email {
+  display: flex;
+  margin-left: 371px;
+}
+.header-phone-email > .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.solutions-text-field {
+  max-width: 696px;
+  display: block;
+  margin: 0 auto;
+}
+
+.gird-solutions {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.gird-solutions .item {
+  flex-basis: calc((100% - 3 * 30px) / 4);
+}
+.gird-what-we-do {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.gird-what-we-do .item {
+  flex-basis: calc((100% - 2 * 30px) / 3);
+}
+
+.gird-our-team {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.gird-our-team .item {
+  flex-basis: calc((100% - 3 * 30px) / 4);
+  max-width: 270px;
+}
+
+.gird-porfolio {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.gird-portfolio .item {
+  flex-basis: calc((100% - 2 * 30px) / 3);
+  max-width: 370px;
 }
 
 /* definicja czcionki telefonu i e-maila w nagłówku strony */
@@ -110,6 +264,9 @@ body {
   letter-spacing: 0.03em;
   color: var(--desciption);
 }
+.team-members-specialties .item {
+  background: var(--highlight);
+}
 
 .portfolio-type-project {
   font-size: 16px;
@@ -117,12 +274,16 @@ body {
   letter-spacing: 0.03em;
   color: var(--desciption);
 }
-
+.portfolio-type-project .item {
+  border: 1px solid #eeeeee;
+}
 /* tło wykorzystywane na stronie głównej i stopce */
 .background {
   background: var(--bg);
 }
-
+.background-second {
+  background: var(--bg-second);
+}
 /* definicja przycisku "Zamów usługę" */
 .button-zu {
   background-color: var(--bg-inside-button);
@@ -135,6 +296,8 @@ body {
   letter-spacing: 0.06em;
   border-radius: 4px;
   cursor: pointer;
+  display: block;
+  margin: 30px auto 0px;
 }
 .button-zu:hover {
   background: var(--hover-color);
@@ -174,7 +337,7 @@ body {
 }
 
 /* ustawienia użytych na stronie nagłówków */
-.motto {
+.for-your-business {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.363;
@@ -197,6 +360,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--primary-color);
+  margin-bottom: 10px;
 }
 .names-team-members {
   font-weight: 500;
@@ -205,13 +369,24 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-color);
+  margin-top: 30px;
 }
+
+.names-team-members-descirption {
+  margin: 10px auto 30px;
+}
+
 .portfolio-name-project {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--primary-color);
+  margin: 20px 24px 0px;
+}
+
+.portfolio-project-description {
+  margin: 4px 24px 20px;
 }
 
 /* parametry danych adresowych w stopce */
@@ -221,4 +396,5 @@ body {
   line-height: 2;
   letter-spacing: 0.03em;
   color: var(--highlight);
+  margin-top: 10px;
 }
